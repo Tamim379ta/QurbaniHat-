@@ -5,10 +5,10 @@ const TopAnimals = async () => {
   const res = await fetch('https://qurbani-hat.vercel.app/data.json')
   const data = await res.json()
 
-  const items = data.slice(0, 8)
+  const items = data.slice(0, 10)
 
   return (
-    <div>
+    <div className=" px-5 md:px-0">
 
       <h1 className="font-bold text-2xl m-5">Top Animals</h1>
 

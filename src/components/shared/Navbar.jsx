@@ -1,13 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Navlink from './Navlink';
 import Logo from '@/assets/logo.png'
 
 const Navbar = () => {
   const links = (
     <>
-    <li><Link href={'/'}>Home</Link></li>
-    <li><Link href={'/all-animals'}>All Animals</Link></li>
-    <li><Link href={'/prfile'}>Profile</Link></li>
+
+      <li><Navlink href={'/'}>Home</Navlink></li>
+      <li><Navlink href={'/all-animals'}>All Animals</Navlink></li>
+      <li><Navlink href={'/profile'}>Profile</Navlink></li>
+
     </>
   )
   return (
@@ -20,22 +23,22 @@ const Navbar = () => {
           <ul
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-           {links}
+            {links}
           </ul>
         </div>
-       <Link href={'/'}>
-       <Image
-       src={Logo}
-       alt='QurbaniHat'
-       width={150}
-       height={100}
-       />
+        <Link href={'/'}>
+          <Image
+            src={Logo}
+            alt='QurbaniHat'
+            width={150}
+            height={100}
+          />
 
-       </Link>
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-        {links}
+          {links}
         </ul>
       </div>
       <div className="navbar-end">

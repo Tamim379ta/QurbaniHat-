@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 const BannerPage = () => {
   return (
-    <div className='mt-5'>
+    <div className='mt-5  px-5 md:px-0'>
       <div className='relative'>
 
         <Image
@@ -12,11 +12,11 @@ const BannerPage = () => {
           alt='Banner Image'
           width={1000}
           height={1000}
-          className='rounded-xl w-full '
+          className='rounded-xl w-full'
         />
 
 
-        <div className='absolute top-1 right-1 md:top-40 md:right-40 '>
+        <div className='absolute top-1 right-1 lg:top-40 lg:right-40 '>
           <p className='text-2xl md:text-5xl font-bold text-white animate__bounceIn'>QurbaniHat, </p>
           <p className='text-2xl md:text-5xl font-bold text-white animate__bounceIn'>Livestock Booking <br /> Platform.</p>
 

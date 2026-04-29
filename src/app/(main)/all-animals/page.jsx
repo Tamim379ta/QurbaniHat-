@@ -6,7 +6,7 @@ const AllAnimalsPAge = async() => {
   const data = await res.json()
 
   return (
-    <div>
+    <div className=' px-5 md:px-0'>
 
        <h1 className="font-bold text-2xl m-5">All Animals</h1>
 
