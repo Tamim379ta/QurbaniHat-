@@ -118,19 +118,6 @@
   },
   {
     "id": 10,
-    "name": "Boer Goat",
-    "type": "Goat",
-    "breed": "Boer",
-    "price": 45000,
-    "weight": 50,
-    "age": 2,
-    "location": "Gazipur",
-    "description": "Imported Boer goat, premium quality.",
-    "image": "https://i.ibb.co.com/hF75FxCq/pexels-fox70-33761003.jpg",
-    "category": "Small Animal"
-  },
-  {
-    "id": 11,
     "name": "Deshi Sheep",
     "type": "Sheep",
     "breed": "Local",
@@ -143,7 +130,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Garole Sheep",
     "type": "Sheep",
     "breed": "Garole",
@@ -156,7 +143,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Deshi Bull",
     "type": "Cow",
     "breed": "Local",
@@ -169,7 +156,7 @@
     "category": "Large Animal"
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Cross Goat",
     "type": "Goat",
     "breed": "Local Cross",
@@ -182,7 +169,7 @@
     "category": "Small Animal"
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Premium Dairy Cow",
     "type": "Cow",
     "breed": "Holstein Friesian",
