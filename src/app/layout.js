@@ -1,6 +1,7 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import 'animate.css';
+import { ToastContainer } from "react-toastify";
 
 
 
@@ -21,7 +22,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${outfit.className}h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <ToastContainer/>
+        </body>
     </html>
   );
 }

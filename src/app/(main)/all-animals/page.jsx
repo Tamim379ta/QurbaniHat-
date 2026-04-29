@@ -10,6 +10,8 @@ const AllAnimalsPAge = async() => {
 
        <h1 className="font-bold text-2xl m-5">All Animals</h1>
 
+       {/* need to create a shortinglist */}
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-5">
         {
           data.map(item => <AnimalsCard key={item.id} item={item} />)
