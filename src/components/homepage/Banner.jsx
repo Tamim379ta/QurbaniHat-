@@ -21,7 +21,7 @@ const BannerPage = () => {
           <p className='text-2xl md:text-5xl font-bold text-white animate__bounceIn'>Livestock Booking <br /> Platform.</p>
 
           <Link href={'/all-animals'}>
-          <button className='btn mt-2 bg-transparent text-white hover:bg-white/20 hover:scale-102 '>See All Animals <FaArrowRight/></button>
+          <button className='btn mt-2 bg-transparent text-white hover:bg-white/20 hover:scale-102  animate__bounceIn'>See All Animals <FaArrowRight/></button>
           </Link>
         </div>
 
