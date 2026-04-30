@@ -35,13 +35,16 @@ const DetailsPage = async ({ params }) => {
         </div>
 
         <div className='my-2'>
-          <Form/>
+          <Form />
 
         </div>
 
-        <Link href={`/`}>
-          <button className="btn btn-wide rounded-3xl hover:border-black "><BiHome /> Back to Home</button>
-        </Link>
+        <div className='flex justify-between'>
+          <div></div>
+          <Link href={`/`}>
+            <button className="btn btn-wide rounded-3xl hover:border-black "><BiHome /> Back to Home</button>
+          </Link>
+        </div>
 
       </div>
 

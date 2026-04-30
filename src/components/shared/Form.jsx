@@ -1,74 +1,43 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
+import { MdDone } from 'react-icons/md';
 import { toast } from 'react-toastify';
 
 
 const Form = () => {
 
+
   const handleClick = (e) => {
+
     e.preventDefault();
     toast.success("Booking Successfull")
+    e.target.reset();
   }
   return (
-    <div>
+    <div className='border p-3 border-taupe-400 rounded-xl shadow-xl'>
+      <h1 className='font-semibold text-xl mb-2'>Booking Form</h1>
       <form onSubmit={handleClick} className="space-y-2">
 
-        <div>
-          <label className="block font-semibold text-gray-700">
-            Full Name
-          </label>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your name"
-            required
-            className="mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-
-        <div>
-          <label className="block font-semibold text-gray-700">
-            Email Address
-          </label>
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-            className="mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-
-        <div>
-          <label className="block font-semibold text-gray-700">
-            Phone Number
-          </label>
-          <input
-            type="tel"
-            name="phone"
-            placeholder="01XXXXXXXXX"
-            required
-            className="mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
-
-        <div>
-          <label className="block font-semibold text-gray-700">
-            Address
-          </label>
-          <textarea
-            name="address"
-            rows="2"
-            cols="30"
-            placeholder="Enter your address"
-            required
-            className="mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500"
-          />
-        </div>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">Full Name</legend>
+          <input required type="text" className="input" placeholder="Type here" />
+        </fieldset>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend"> Email Address</legend>
+          <input required type="=email" className="input" placeholder="Enter your email" />
+        </fieldset>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend"> Phone Number</legend>
+          <input required type="number" className="input" placeholder="01XXXXXXXXX" />
+        </fieldset>
+        <fieldset className="fieldset">
+          <legend className="fieldset-legend">Address</legend>
+          <input required type="text" className="input" placeholder="Enter your address"/>
+        </fieldset>
 
 
-        <button type='submit'  className="btn btn-wide rounded-3xl hover:border-black">
-          Confirm Booking
+        <button type='submit' className="btn btn-wide rounded-3xl hover:border-black">
+         <MdDone/> Confirm Booking
         </button>
 
       </form>
