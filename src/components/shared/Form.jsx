@@ -16,7 +16,7 @@ const Form = () => {
   return (
     <div className='border p-3 border-taupe-400 rounded-xl shadow-xl'>
       <h1 className='font-semibold text-xl mb-2'>Booking Form</h1>
-      <form onSubmit={handleClick} className="space-y-2">
+      <form onSubmit={handleClick} >
 
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Full Name</legend>
@@ -32,11 +32,11 @@ const Form = () => {
         </fieldset>
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Address</legend>
-          <input required type="text" className="input" placeholder="Enter your address"/>
+          <textarea required  className="textarea resize-none h-14 min-h-0" placeholder="Enter your address"></textarea>
         </fieldset>
 
 
-        <button type='submit' className="btn btn-wide rounded-3xl hover:border-black">
+        <button type='submit' className="btn btn-wide rounded-3xl hover:border-black mt-2">
          <MdDone/> Confirm Booking
         </button>
 
