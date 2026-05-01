@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navlink from './Navlink';
 import Logo from '@/assets/logo.png'
+import { BiLogIn } from 'react-icons/bi';
 
 const Navbar = () => {
   const links = (
@@ -41,8 +42,9 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end">
-        <Link className='btn' href={'/singIn'}>Login</Link>
+      <div className="navbar-end gap-2">
+        <Link className='btn' href={'/login'}>Login <BiLogIn/></Link>
+        <Link className='btn' href={'/register'}>Register <BiLogIn/></Link>
       </div>
     </div>
   );
