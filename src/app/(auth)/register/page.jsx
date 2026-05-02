@@ -50,7 +50,7 @@ const RegisterPAge = () => {
                   type="email"
                   required
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
-                  placeholder="type here" />
+                  placeholder="email" />
               </fieldset>
 
               <fieldset className="fieldset">
@@ -59,7 +59,7 @@ const RegisterPAge = () => {
                   type="text"
                   required
                   className="text-white   border-b border-gray-400  p-2.5 outline-none "
-                  placeholder="type here" />
+                  placeholder="password" />
               </fieldset>
 
               <div className="flex justify-between mt-3">

@@ -10,7 +10,7 @@ const TopAnimals = async () => {
   return (
     <div className=" px-5 md:px-0">
 
-      <h1 className="font-bold text-2xl m-5">Top Animals</h1>
+      <h1 className="font-bold text-3xl m-5 text-center">Top Animals</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-5">
         {
