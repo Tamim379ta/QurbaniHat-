@@ -1,19 +1,33 @@
 "use client"
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from '@heroui/react';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const ProfilePage = () => {
-  const userData = authClient.useSession()
-  const users = userData.data
-  const user = users.user
-  console.log(user)
+  const router = useRouter();
+  const { data, isPending } = authClient.useSession();
+
+  if (isPending) {
+    return (
+      <div className='max-w-96 bg-base-100 shadow-2xl rounded-2xl my-10 p-10 mx-auto flex justify-center'>
+        <p>Loading...</p>
+      </div>
+    );
+  }
+
+  if (!data?.user) {
+    router.push('/login');
+  }
+
+  const { user } = data;
+
   return (
     <div className=' max-w-96 bg-base-100 shadow-2xl rounded-2xl my-10 p-10  mx-auto '>
       <div className='flex justify-center '>
         <Avatar size='lg'>
-          <Avatar.Image alt="user name" src={users.user.image} referrerPolicy='no-referrer' />
-          <Avatar.Fallback>{users.user.name[0]}</Avatar.Fallback>
+          <Avatar.Image alt="user name" src={user.image} referrerPolicy='no-referrer' />
+          <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
         </Avatar>
 
       </div>
