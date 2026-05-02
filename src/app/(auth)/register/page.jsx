@@ -1,6 +1,49 @@
+"use client"
+
+import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useForm } from "react-hook-form";
+import { FcGoogle } from "react-icons/fc";
 
 const RegisterPAge = () => {
+
+  const signIn = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+  const route = useRouter()
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+
+  const handelRegister = async (data) => {
+
+
+    const { data: res, error } = await authClient.signUp.email({
+
+      name: data.name,
+      email: data.email,
+      password: data.password,
+
+
+    });
+
+    if (error) {
+      console.error(error);
+      return;
+    }
+
+    if (!error) {
+      route.push('/')
+    }
+
+  }
   return (
     <div className="p-5 md:p-0">
 
@@ -25,47 +68,67 @@ const RegisterPAge = () => {
         <div className='p-0 md:p-10'>
 
           <div className="boder bg-blue-950 p-10 md:p-15 rounded-2xl">
-            <form>
+            <form onSubmit={handleSubmit(handelRegister)}>
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-white">Full Name</legend>
                 <input
+                  {...register("name", {
+                    required: "name field is required",
+                  })}
                   type="name"
-                  required
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
                   placeholder="name" />
+                {errors.name && (
+                  <p className="text-red-500">{errors.name.message}</p>
+                )}
               </fieldset>
 
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-white">Image Url</legend>
                 <input
+                  {...register("image", {
+                    required: "image field is required",
+                  })}
                   type="img"
-                  required
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
                   placeholder="image url" />
+                {errors.name && (
+                  <p className="text-red-500">{errors.image.message}</p>
+                )}
               </fieldset>
 
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-white">Email</legend>
                 <input
+                  {...register("email", {
+                    required: "email field is required",
+                  })}
                   type="email"
-                  required
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
                   placeholder="email" />
+                {errors.name && (
+                  <p className="text-red-500">{errors.email.message}</p>
+                )}
               </fieldset>
 
               <fieldset className="fieldset">
                 <legend className="fieldset-legend text-white">Password</legend>
                 <input
-                  type="text"
-                  required
+                  {...register("password", {
+                    required: "password field is required",
+                  })}
+                  type="password"
                   className="text-white   border-b border-gray-400  p-2.5 outline-none "
                   placeholder="password" />
+                {errors.name && (
+                  <p className="text-red-500">{errors.password.message}</p>
+                )}
               </fieldset>
 
-              <div className="flex justify-between mt-3">
-                <div></div>
+              <div className="flex flex-col gap-2 mt-3">
 
-                <button className="btn ">Register</button>
+                <button className="btn btn-outline text-white hover:bg-white/20 ">Register</button>
+                <button onClick={signIn} className="btn btn-outline text-white hover:bg-white/20"> <FcGoogle /> Contiue With Google</button>
               </div>
 
 

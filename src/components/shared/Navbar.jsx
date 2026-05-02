@@ -1,10 +1,19 @@
+"use client"
+
 import Image from 'next/image';
 import Link from 'next/link';
 import Navlink from './Navlink';
 import Logo from '@/assets/logo.png'
-import { BiLogIn } from 'react-icons/bi';
+import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { authClient } from '@/lib/auth-client';
+import { Avatar } from "@heroui/react";
 
 const Navbar = () => {
+
+
+  const userData = authClient.useSession()
+  const users = userData.data
+
   const links = (
     <>
 
@@ -42,10 +51,24 @@ const Navbar = () => {
           {links}
         </ul>
       </div>
-      <div className="navbar-end gap-2">
-        <Link className='btn' href={'/login'}>Login <BiLogIn/></Link>
-        <Link className='btn' href={'/register'}>Register <BiLogIn/></Link>
-      </div>
+      {
+        users ? (
+          <div className="navbar-end gap-2">
+            <p className='hidden md:block'> Hi, {users.user.name}</p>
+            <Avatar>
+              <Avatar.Image alt="user name" src={users.user.image} referrerPolicy='no-referrer' />
+              <Avatar.Fallback>{users.user.name[0]}</Avatar.Fallback>
+            </Avatar>
+            <button className='btn' onClick={async() => await authClient.signOut()} >Logout <BiLogOut/></button>
+          </div>
+
+        ) : (
+          <div className="navbar-end gap-2">
+            <Link className='btn' href={'/login'}>Login <BiLogIn /></Link>
+            <Link className='btn' href={'/register'}>Register <BiLogIn /></Link>
+          </div>
+        )
+      }
     </div>
   );
 };
