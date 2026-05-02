@@ -89,7 +89,7 @@ const RegisterPAge = () => {
                   {...register("image", {
                     required: "image field is required",
                   })}
-                  type="img"
+                  type="url"
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
                   placeholder="image url" />
                 {errors.name && (

@@ -1,4 +1,5 @@
 "use client"
+import UpdateModal from '@/components/shared/Modal';
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from '@heroui/react';
 import { useRouter } from 'next/navigation';
@@ -34,7 +35,9 @@ const ProfilePage = () => {
       <p className='text-center text-2xl my-2 font-semibold'>{user.name}</p>
       <p className='text-center text-gray-400'>{user.email}</p>
 
-
+      <div className='flex justify-center mt-2'>
+        <UpdateModal/>
+      </div>
     </div>
   );
 };
