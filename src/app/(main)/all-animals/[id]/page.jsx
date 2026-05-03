@@ -31,7 +31,7 @@ const DetailsPage = async ({ params }) => {
           <p className="font-semibold">Weight: <span className="text-taupe-400">{item.weight}</span></p>
           <p className="font-semibold">Age: <span className="text-taupe-400">{item.age}</span></p>
           <p className="font-semibold">Category: <span className="text-taupe-400">{item.category}</span></p>
-          <p className="font-semibold">Price: <span className="text-taupe-400">${item.price}</span></p>
+          <p className="font-semibold">Price: <span className="text-taupe-400">BDT {item.price}</span></p>
         </div>
 
         <div className='my-2'>
@@ -42,7 +42,7 @@ const DetailsPage = async ({ params }) => {
         <div className='flex justify-between'>
           <div></div>
           <Link href={`/`}>
-            <button className="btn btn-wide rounded-3xl hover:border-black "><BiHome /> Back to Home</button>
+            <button className="btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover "><BiHome /> Back to Home</button>
           </Link>
         </div>
 

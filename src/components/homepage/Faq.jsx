@@ -8,7 +8,7 @@ const FAQItem = ({ question, answer }) => {
   return (
     <div>
       <p
-        className='text-xl rounded-xs bg-slate-200 p-3 flex justify-between items-center cursor-pointer select-none'
+        className='text-xl rounded-xs bg-slate-300 p-3 flex justify-between items-center cursor-pointer select-none'
         onClick={() => setIsOpen(!isOpen)}
       >
         {question}
@@ -28,7 +28,7 @@ const FAQItem = ({ question, answer }) => {
 
 const FAQSection = () => {
   return (
-    <div className='my-10'>
+    <div className='py-10 bg-slate-100 px-5'>
       <h1 className='text-center my-5 text-3xl font-bold'>Frequently Asked Questions</h1>
 
       <FAQItem

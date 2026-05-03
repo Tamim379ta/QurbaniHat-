@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
   return (
     <div className={`${outfit.className}`}>
     <Navbar />
-    <main className="container mx-auto">
+    <main>
       {children}
     </main>
 

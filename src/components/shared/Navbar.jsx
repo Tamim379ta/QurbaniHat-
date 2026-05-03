@@ -4,9 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Navlink from './Navlink';
 import Logo from '@/assets/logo.png'
-import { BiLogIn, BiLogOut } from 'react-icons/bi';
+import { BiCategory, BiHome, BiLogIn, BiLogOut } from 'react-icons/bi';
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from "@heroui/react";
+import { CgProfile } from 'react-icons/cg';
 
 const Navbar = () => {
 
@@ -17,9 +18,9 @@ const Navbar = () => {
   const links = (
     <>
 
-      <li><Navlink href={'/'}>Home</Navlink></li>
-      <li><Navlink href={'/all-animals'}>All Animals</Navlink></li>
-      <li><Navlink href={'/profile'}>Profile</Navlink></li>
+      <li><Navlink href={'/'}> <BiHome/> Home</Navlink></li>
+      <li><Navlink href={'/all-animals'}> <BiCategory /> All Animals</Navlink></li>
+      <li><Navlink href={'/profile'}> <CgProfile /> Profile</Navlink></li>
 
     </>
   )
@@ -59,13 +60,13 @@ const Navbar = () => {
               <Avatar.Image alt="user name" src={users.user.image} referrerPolicy='no-referrer' />
               <Avatar.Fallback>{users.user.name[0]}</Avatar.Fallback>
             </Avatar>
-            <button className='btn' onClick={async() => await authClient.signOut()} >Logout <BiLogOut/></button>
+            <button className='btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl' onClick={async() => await authClient.signOut()} >Logout <BiLogOut/></button>
           </div>
 
         ) : (
           <div className="navbar-end gap-2">
-            <Link className='btn' href={'/login'}>Login <BiLogIn /></Link>
-            <Link className='btn' href={'/register'}>Register <BiLogIn /></Link>
+            <Link className='btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl' href={'/login'}>Login <BiLogIn /></Link>
+            <Link className='btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl ' href={'/register'}>Register <BiLogIn /></Link>
           </div>
         )
       }

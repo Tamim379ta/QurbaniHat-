@@ -36,7 +36,7 @@ const Form = () => {
         </fieldset>
 
 
-        <button type='submit' className="btn btn-wide rounded-3xl hover:border-black mt-2">
+        <button type='submit' className="btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover mt-2">
          <MdDone/> Confirm Booking
         </button>
 
