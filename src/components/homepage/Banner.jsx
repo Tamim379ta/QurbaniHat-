@@ -17,11 +17,11 @@ const BannerPage = () => {
 
 
         <div className='absolute top-1 right-1 md:top-10 md:right-10 lg:top-40 lg:right-40 '>
-          <p className='text-2xl md:text-6xl font-bold text-white animate__animated  animate__fadeInRight '>QurbaniHat, </p>
-          <p className='text-2xl md:text-6xl font-bold text-white animate__animated  animate__fadeInRight'>Livestock Booking <br /> Platform.</p>
+          <p className='text-2xl md:text-6xl font-bold text-white animate__animated  animate__fadeInRight animate__slow'>QurbaniHat, </p>
+          <p className='text-2xl md:text-6xl font-bold text-white animate__animated  animate__fadeInRight animate__slow'>Livestock Booking <br /> Platform.</p>
 
           <Link href={'/all-animals'}>
-          <button className='btn mt-2 bg-transparent text-white hover:bg-white/20 hover:scale-102 animate__animated  animate__fadeInRight'>See All Animals <FaArrowRight/></button>
+          <button className='btn mt-2 bg-transparent text-white hover:bg-white/20 hover:scale-102 animate__animated  animate__fadeInRight animate__slow'>See All Animals <FaArrowRight/></button>
           </Link>
         </div>
 

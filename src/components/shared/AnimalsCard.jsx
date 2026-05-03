@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const AnimalsCard = ({ item }) => {
   return (
-    <div className="p-5 shadow-2xl rounded-2xl hover:scale-105 duration-300">
+    <div className="p-5 shadow-2xl bg-white rounded-2xl hover:scale-105 duration-300">
 
       
       <div className="relative aspect-square">

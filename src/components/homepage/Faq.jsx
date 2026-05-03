@@ -8,12 +8,12 @@ const FAQItem = ({ question, answer }) => {
   return (
     <div>
       <p
-        className='text-xl rounded-xs bg-slate-300 p-3 flex justify-between items-center cursor-pointer select-none'
+        className='text-xl rounded-xs bg-slate-200 p-3 flex justify-between items-center cursor-pointer select-none'
         onClick={() => setIsOpen(!isOpen)}
       >
         {question}
         <span
-          className='transition-transform duration-300'
+          className='transition-transform duration-400'
           style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}
         >
           <IoIosArrowDown />
