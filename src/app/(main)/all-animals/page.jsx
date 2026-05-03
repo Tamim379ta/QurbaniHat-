@@ -17,7 +17,7 @@ const AllAnimalsPAge = () => {
   }, []);
 
   return (
-    <div className=' px-5 md:px-0'>
+    <div className=' container mx-auto px-5 md:px-0'>
 
       <div className='flex gap-4 items-center'>
         <h1 className="font-bold text-2xl m-5">All Animals</h1>

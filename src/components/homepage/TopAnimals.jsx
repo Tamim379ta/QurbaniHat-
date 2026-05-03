@@ -24,7 +24,7 @@ const TopAnimals = async () => {
 
         <div className="flex justify-center">
           <Link href={'/all-animals'}>
-            <button className='btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover hover:scale-102 '>See All Animals <FaArrowRight /></button>
+            <button className=' btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover hover:scale-102 '>See All Animals <FaArrowRight /></button>
           </Link>
         </div>
       </div>

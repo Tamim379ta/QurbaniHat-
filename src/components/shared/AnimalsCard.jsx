@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 
 const AnimalsCard = ({ item }) => {
   return (
-    <div className="p-5 shadow-2xl bg-white rounded-2xl hover:scale-105 duration-300">
+    <div className="p-5 animate__animated animate__fadeInUp animate__slow shadow-2xl bg-white rounded-2xl hover:scale-105 duration-300">
 
       
       <div className="relative aspect-square">
@@ -24,7 +24,7 @@ const AnimalsCard = ({ item }) => {
       </div>
 
       <Link href={`/all-animals/${item.id}`}>
-      <button className="btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover">View Details <FaArrowRight/></button>
+      <button className="btn btn-wide rounded-3xl bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white hover:border-2 hover:border-accent-hover ">View Details <FaArrowRight/></button>
       </Link>
 
     </div>
