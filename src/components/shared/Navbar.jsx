@@ -66,7 +66,7 @@ const Navbar = () => {
         ) : (
           <div className="navbar-end gap-2">
             <Link className='btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl' href={'/login'}>Login <BiLogIn /></Link>
-            <Link className='btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl ' href={'/register'}>Register <BiLogIn /></Link>
+            <Link className=' hidden sm:inline-flex btn bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] text-white rounded-3xl ' href={'/register'}>Register <BiLogIn /></Link>
           </div>
         )
       }

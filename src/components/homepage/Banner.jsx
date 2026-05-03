@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
 const BannerPage = () => {
   return (
-    <div className='mt-5 '>
+    <div>
       <div className='relative'>
 
         <Image
