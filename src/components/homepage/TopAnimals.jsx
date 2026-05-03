@@ -10,7 +10,7 @@ const TopAnimals = async () => {
   const items = data.slice(0, 4)
 
   return (
-    <div className=" bg-slate-200 p-20 px-5 md:px-0">
+    <div className=" bg-base-200 p-20 px-5 md:px-0">
 
       <div className="container mx-auto">
         <h1 className="font-bold text-3xl m-5 text-center">Featured Animals</h1>

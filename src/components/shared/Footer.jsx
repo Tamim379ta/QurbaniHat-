@@ -7,7 +7,6 @@ const Footer = () => {
     <div className='bg-base-300 text-base-content p-10'>
       <footer className="footer sm:footer-horizontal">
 
-        {/* Brand */}
         <aside>
           <Image
             src={Logo}
@@ -15,7 +14,8 @@ const Footer = () => {
             width={200}
             height={200}
           />
-          <p>
+          <p className=" text-sm text-gray-500">Serving your Qurbani with trust and sincerity.</p>
+          <p className=" text-sm text-gray-500">
             Trusted platform for buying & booking livestock
             <br />
             Safe • Reliable • Fast
@@ -39,11 +39,13 @@ const Footer = () => {
         </nav>
 
         <nav>
-          <h6 className="footer-title">Support</h6>
-          <a className="link link-hover">Contact Us</a>
-          <a className="link link-hover">FAQ</a>
-          <a className="link link-hover">How it Works</a>
+          <h6 className="footer-title">Contact Us</h6>
+          <a className="link link-hover">📧 Email: support@qurbanihat.com</a>
+          <a className="link link-hover">📞 Phone: +880 1234-567890</a>
+          <a className="link link-hover">📍 Location: Dhaka, Bangladesh</a>
+          <a className="link link-hover">⏰ Time: 9:00 AM – 9:00 PM </a>
         </nav>
+
 
 
 
@@ -54,7 +56,7 @@ const Footer = () => {
           © {new Date().getFullYear()} QurbaniHat  — Built for safe & smart livestock trading.
         </div>
         <div>
-          <ul className='flex gap-2 text-2xl'>
+          <ul className='flex gap-2 mt-2 text-2xl'>
             <li>
               <FaFacebook />
             </li>
