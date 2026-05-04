@@ -6,6 +6,8 @@ import { Outfit } from "next/font/google";
     subsets: ["latin"]
   })
 
+
+
 const AuthLayout = ({ children }) => {
 
   return (

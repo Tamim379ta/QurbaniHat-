@@ -3,7 +3,9 @@ import AnimalsCard from '@/components/shared/AnimalsCard';
 import Sort from '@/components/shared/Sort';
 import React, { useEffect, useState } from 'react';
 
+
 const AllAnimalsPAge = () => {
+
   const [animals, setAnimals] = useState([]);
   const [allAnimals, setAllAnimals] = useState([]);
 

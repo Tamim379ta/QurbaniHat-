@@ -49,7 +49,7 @@ const RegisterPAge = () => {
 
       <div className=' flex flex-col md:flex-row gap-5 md:gap-10  container bg-linear-to-r from-cyan-400 via-blue-900 to-[#020024] mx-auto my-10 p-10 rounded-2xl'>
 
-        <div className='p-0 md:p-10 '>
+        <div className='p-0 md:p-10 animate__animated animate__fadeInLeft '>
 
           <p className='text-2xl font-bold'>Welcome to, <span className="md:hidden">QurbaniHat</span></p>
           <div className="hidden md:block">
@@ -65,7 +65,7 @@ const RegisterPAge = () => {
 
         </div>
 
-        <div className='p-0 md:p-10'>
+        <div className='p-0 md:p-10 animate__animated animate__fadeInRight'>
 
           <div className="boder bg-blue-950 p-5 md:p-15 rounded-2xl">
             <form onSubmit={handleSubmit(handelRegister)}>
@@ -128,7 +128,7 @@ const RegisterPAge = () => {
               <div className="flex flex-col gap-2 mt-3">
 
                 <button className="btn btn-outline text-white hover:bg-white/20 ">Register</button>
-                <button onClick={signIn} className="btn btn-outline text-white hover:bg-white/20"> <FcGoogle /> Contiue With Google</button>
+                <button onClick={signIn} className="btn btn-outline text-white hover:bg-white/20"> <FcGoogle /> Continue With Google</button>
               </div>
 
 
