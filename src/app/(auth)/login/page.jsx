@@ -4,6 +4,7 @@ import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 
 
@@ -29,6 +30,7 @@ const LoginPage = () => {
     });
 
     if (error) {
+      toast.error("Invalid email or password, Please try again.")
       return;
     }
 
