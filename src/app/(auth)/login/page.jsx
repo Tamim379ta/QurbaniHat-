@@ -68,7 +68,7 @@ const LoginPage = () => {
                   type="email"
                   className="text-white border-b border-gray-400  p-2.5 outline-none "
                   placeholder="email" />
-                {errors.name && (
+                {errors.email && (
                   <p className="text-red-500">{errors.email.message}</p>
                 )}
               </fieldset>
@@ -82,7 +82,7 @@ const LoginPage = () => {
                   type="password"
                   className="text-white   border-b border-gray-400  p-2.5 outline-none "
                   placeholder="password" />
-                {errors.name && (
+                {errors.password && (
                   <p className="text-red-500">{errors.password.message}</p>
                 )}
               </fieldset>
